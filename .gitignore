@@ -1,0 +1,16 @@
+# frontend ignored files
+node_modules/
+**/frontend/build/
+
+# logic ignored files
+venv/
+
+# webapp ignored files
+target/
+.mvn/
+!**/maven-wrapper.jar
+
+# IDE ignored files
+.idea/
+*.iml
+.DS_Store
