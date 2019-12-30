@@ -15,16 +15,15 @@ public class SentimentController {
 
     @PostMapping("/sentiment")
     public SentimentDto sentimentAnalysis(@RequestBody SentenceDto sentenceDto) {
+      System.out.println(sentenceDto.toString());
         RestTemplate restTemplate = new RestTemplate();
 
         return restTemplate.postForEntity(saLogicApiUrl + "/analyse/sentiment",
-                sentenceDto, SentimentDto.class)
-                .getBody();
+                sentenceDto, SentimentDto.class).getBody();
     }
 
     @GetMapping("/testHealth")
     public void testHealth() {
+      System.out.println("Hello from Spring Web App!");
     }
 }
-
-
